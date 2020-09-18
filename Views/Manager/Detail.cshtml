@@ -1,0 +1,40 @@
+﻿@model Manager
+@{
+    ViewBag.Title = "Manager Detail";
+}
+
+<h2>@Model.FirstName.ToUpper() @Model.LastName.ToUpper() Details</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>Name</td>
+        <td>@Model.FirstName @Model.LastName</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>@Model.Phone</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Category</td>
+        <td>@Model.Category.CategoryName</td>
+    </tr>
+    <tr>
+        <td>Date Added</td>
+        <td>@Model.Created.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <td>Organization</td>
+        <td>@Model.Organization</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <a class="btn btn-primary" asp-controller="Manager" asp-action="Edit" asp-route-id="@Model.ManagerId">Edit</a>
+            <a class="btn btn-primary" asp-controller="Manager" asp-action="Delete" asp-route-id="@Model.ManagerId">Delete</a>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index" asp-route-id="@Model.ManagerId">Home</a>
+        </td>
+    </tr>
+</table>

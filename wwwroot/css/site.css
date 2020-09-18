@@ -1,0 +1,23 @@
+﻿body {
+    background-color: #E9E9E9;
+}
+
+main {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: darkslategrey;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+h3 {
+    font-size: 1.25rem;
+}

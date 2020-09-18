@@ -1,0 +1,12 @@
+﻿@model Manager
+
+<h2>Delete Contact</h2>
+<h3>Do you really want to delete <strong>@Model.FirstName @Model.LastName?</strong></h3>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ManagerId" />
+
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Cancel</a>
+</form>
+
